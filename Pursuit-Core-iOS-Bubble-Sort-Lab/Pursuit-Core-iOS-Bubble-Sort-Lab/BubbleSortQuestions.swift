@@ -168,7 +168,6 @@ func bubbleSort<T: Comparable>(list: LinkedList<T>, by isSorted: (T, T) -> Bool)
           repeat {
               swapped = false
               var current = head
-              print("swap bool is true")
               
               while current?.next != nil {
                   if let left = current?.value, let right =
@@ -181,8 +180,6 @@ func bubbleSort<T: Comparable>(list: LinkedList<T>, by isSorted: (T, T) -> Bool)
                           let temp = current?.value
                           current?.value = (current?.next!.value)!
                           current?.next?.value = temp!
-                          print("swap bool is now false")
-                          
                       }
                           current = current?.next
                   }
