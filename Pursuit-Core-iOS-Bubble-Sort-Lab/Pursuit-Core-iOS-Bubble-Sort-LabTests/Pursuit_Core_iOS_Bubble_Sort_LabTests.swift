@@ -40,8 +40,8 @@ class Pursuit_Core_iOS_Bubble_Sort_LabTests: XCTestCase {
                                      sortedCollection: [0, 1, 2, 3, 4, 5, 8, 9, 24, 25, 42, 44, 92, 133, 134, 462, 657]),
                          TestCase(collection: [2, -6, -3, 8, 4, 1],
                                      sortedCollection: [1, -6, -3, 2, 4, 8]),
-//                         TestCase(collection: [2, -6, -3, -8, 4, 1],
-//                                     sortedCollection: [-2, -6, -3, -8, 1, 4]),
+                         TestCase(collection: [-2, -6, -3, -8, 4, 1],
+                                     sortedCollection: [-2, -6, -3, -8, 1, 4]),
                          TestCase(collection: [0,0,0,0,0,0,0,0,0,0,0],
                                      sortedCollection: [0,0,0,0,0,0,0,0,0,0,0]),
                          TestCase(collection: [1,2,3,2,4,0,0,1],
@@ -86,4 +86,3 @@ class Pursuit_Core_iOS_Bubble_Sort_LabTests: XCTestCase {
         }
     }
 }
-

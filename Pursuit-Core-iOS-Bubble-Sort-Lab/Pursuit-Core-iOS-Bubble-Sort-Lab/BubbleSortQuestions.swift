@@ -122,42 +122,80 @@ func cocktailSort<T: Comparable>(arr: [T], by isSorted: (T, T) -> Bool) -> [T] {
 // Implement bubble sort on a linked list
 
 func bubbleSort<T: Comparable>(list: LinkedList<T>, by isSorted: (T, T) -> Bool) -> LinkedList<T> {
+//    let someList = list
+//    let head = someList.head
+//    var swapped = true
+//    if head != nil {
+//
+//        while true {
+//            swapped = false
+//            var current = head
+//            print("swap bool is true")
+//
+//            while current?.next != nil {
+//                if let left = current?.value, let right =
+//                    current?.next?.value{
+//                    if isSorted(right,left){
+//                        print("Swap Occurs")
+//                        //swap
+//                        swapped = true
+//                        print("left: \(left), right: \(right) ")
+//                        let temp = current?.value
+//                        current?.value = (current?.next!.value)!
+//                        current?.next?.value = temp!
+//                        print("swap bool is now false")
+//                        current = current?.next
+//                    }
+//                    else{
+//                        current = current?.next
+//                    }
+//                }
+//            }
+//            if swapped == false{
+//                break
+//            }else{
+//                continue
+//            }
+//        }
+//        return someList
+//    }
+//    return someList
     let someList = list
-    let head = someList.head
-    var swapped = true
-    if head != nil {
-        
-        while true {
-            swapped = true
-            var current = head
-            print("swap bool is true")
-            
-            while current?.next != nil {
-                if let left = current?.value, let right =
-                    current?.next?.value{
-                    if isSorted(right,left){
-                        print("Swap Occurs")
-                        //swap
-                        swapped = false
-                        print("left: \(left), right: \(right) ")
-                        let temp = current?.value
-                        current?.value = (current?.next!.value)!
-                        current?.next?.value = temp!
-                        print("swap bool is now false")
-                        current = current?.next
-                    }
-                    else{
-                        current = current?.next
-                    }
-                }
-            }
-            if swapped == true{
-                break
-            }else{
-                continue
-            }
-        }
+      let head = someList.head
+      var swapped = true
+      if head != nil {
+          
+          repeat {
+              swapped = false
+              var current = head
+              print("swap bool is true")
+              
+              while current?.next != nil {
+                  if let left = current?.value, let right =
+                      current?.next?.value{
+                      if isSorted(right,left){
+                          print("Swap Occurs")
+                          //swap
+                          swapped = true
+                          print("left: \(left), right: \(right) ")
+                          let temp = current?.value
+                          current?.value = (current?.next!.value)!
+                          current?.next?.value = temp!
+                          print("swap bool is now false")
+                          
+                      }
+                          current = current?.next
+                  }
+              }
+              if swapped == false{
+                  break
+              }else{
+                  continue
+              }
+          } while true
+          
         return someList
-    }
-    return someList
+      }
+      return someList
 }
+
